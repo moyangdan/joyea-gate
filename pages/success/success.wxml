@@ -1,0 +1,11 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{false}}" isCustom="{{true}}">
+  <view slot="content">开门成功</view>
+</cu-custom>
+<view class="padding-xs flex align-center margin-top">
+  <view class="flex-sub text-center">
+    <view class="text-xsl padding">
+      <text class=" cuIcon-roundcheckfill text-green"></text>
+    </view>
+    <view class="padding text-success">开门成功</view>
+  </view>
+</view>

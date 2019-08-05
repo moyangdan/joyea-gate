@@ -1,0 +1,9 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{false}}">
+  <view slot="backText">返回</view>
+  <view slot="content">一号园</view>
+</cu-custom>
+<view class="margin transit-gif">
+  <view class="bg-white flex-sub radius shadow-lg">
+    <image src="https://image.weilanwl.com/gif/loading-white.gif" mode="aspectFit" class="gif-white response" style="height:400rpx"></image>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<cu-custom bgColor="bg-gradual-orange" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">授权登录</view>
+</cu-custom>
+<view class='explain_box'> 
+  <view class='tc_code'>
+    <image src='../../images/code-logo.jpg'></image>
+  </view>
+  <!-- <view class='bt_one'>
+    <image src='../../../images/udline.png' mode="widthFix"></image>
+  </view> -->
+  <view class='footer'>
+    
+    <!-- <view class='present_btn'>
+      <button bindtap='join_tc' open-type="getUserInfo" bindgetuserinfo="userInfoHandler">我已了解，下一步</button>
+    </view> -->
+    <view class='isuser'>
+      <button class='btn1' bindtap='join_tc'>已是授权用户</button>
+      <button type="primary" open-type="getUserInfo" bindgetuserinfo="userInfoHandler">授权预约</button>
+    </view>
+    <view class='get'>
+      <text>· 获取微信授权即可开始预约开门</text>
+    </view>
+  </view>
+</view>

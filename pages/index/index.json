@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "一号园智能预约",
+  "enablePullDownRefresh": false,
+  "backgroundTextStyle": "dark",
+  "navigationBarTextStyle": "white",
+  "navigationStyle": "custom",
+  "onReachBottomDistance": 200,
+  "usingComponents": {
+    "weather": "plugin://weather/weather"
+  }
+}

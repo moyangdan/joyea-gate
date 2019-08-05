@@ -1,0 +1,46 @@
+<!--pages/record/record.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">预约登记</view>
+</cu-custom>
+<view class="bg-white padding  margin-top-xs">
+  <view class="cu-steps steps-arrow">
+    <view class="cu-item {{index>basics?'':'text-blue'}}" wx:for="{{basicsList}}" wx:key>
+      <text class="cuIcon-{{item.icon}}"></text> {{item.name}}
+    </view>
+  </view>
+</view>
+<form bindsubmit="formSubmit" report-submit="true">
+  <view class="cu-form-group margin-top">
+    <view class="title">对应大门</view>
+    <input class="text-input" value="{{doorName}}" disabled></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">您的名字*</view>
+    <input placeholder="请输入您的名字(必填)" name="name" auto-focus class="text-input"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">您的公司*</view>
+    <input placeholder="请输入您的公司(必填)" name="company" class="text-input"></input>
+  </view>
+  <view class="cu-form-group">
+    <view class="title">我司接待人*</view>
+    <input placeholder="请输入我司接待人名字(必填)" name="person" bindinput="findPerson" class="text-input" value="{{person}}"></input>
+  </view>
+  <view class="qcc_div" wx:if="{{isShowList && personList.length>0}}">
+    <view class="qcc_item">
+      <view wx:for="{{personList}}" wx:key="id" class="qccName">
+        <view bindtap="choosePerson" data-name='{{item}}'>{{item.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cus-title">备注</view>
+  <!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
+  <view class="cu-form-group margin-top">
+    <textarea name="remark" maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="选填"></textarea>
+  </view>
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-blue lg {{!isLoad?'loading':'over'}}" form-type="submit">提交</button>
+  </view>
+</form>

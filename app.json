@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/transit/transit",
+    "pages/index/index",
+    "pages/auth/auth",
+    "pages/logs/logs",
+    "pages/record/record",
+    "pages/success/success",
+    "pages/wait/wait",
+    "pages/detail/detail",
+    "pages/confirm/confirm"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "custom",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "cu-custom": "/custom/components/cu-custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "当前只用于获取实时天气"
+    }
+  },
+  "plugins": {
+    "weather": {
+      "version": "1.1.0",
+      "provider": "wx6578a11b90205be3"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

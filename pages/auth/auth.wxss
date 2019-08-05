@@ -1,0 +1,71 @@
+page{
+  background-color: #ffffff;
+}
+.tc_code{
+  text-align: center;
+  margin-top: 80px;
+}
+.tc_code image{
+  width: 150px;
+  height: 150px;
+}
+.bt_one{
+  text-align: center;
+  margin-top: 20px;
+}
+.bt_one image{
+  width: 523rpx;
+}
+.bt_two{
+  text-align: center;
+  margin-top: 5px;
+}
+.bt_two text{
+  font-size: 14px;
+  color: #a6a6a6;
+}
+.present{
+  text-align: center;
+  margin-top: 50px;
+}
+.present text{
+  display: block;
+  color: #29ab91;
+  font-size: 18px;
+  line-height: 30px;
+}
+.footer{
+  width: 100%;
+   position: absolute; 
+  bottom: 0;
+}
+.get{
+  display: block;
+  font-size: 14px;
+  color: #a6a6a6;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.present_btn{
+  margin-bottom: 20px;
+}
+.present_btn button{
+  width: 90%;
+}
+.isuser{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.isuser button{
+  width: 40%;
+  display: inline-block;
+  font-size: 14px;
+  height: 94rpx;
+  line-height: 94rpx;
+}
+.btn1{
+  background-color: #ffffff;
+  color: #29ab91;
+  border: 1px solid #29ab91;
+}

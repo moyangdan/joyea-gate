@@ -1,0 +1,9 @@
+<!--pages/wait/wait.wxml-->
+<view class="solids-bottom padding-xs flex align-center margin-top">
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-xsl padding">
+      <text class=" cuIcon-roundcheckfill text-green"></text>
+    </view>
+    <view class="padding text-success">预约成功,等待相关人员审核！</view>
+  </view>
+</view>

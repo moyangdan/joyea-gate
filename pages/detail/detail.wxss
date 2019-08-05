@@ -1,0 +1,9 @@
+/* pages/detail/detail.wxss */
+page{
+  height: 100%;
+  background-color: #fff;
+}
+
+.remark {
+  width: 60% !important;
+}

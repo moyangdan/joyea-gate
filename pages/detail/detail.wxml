@@ -1,0 +1,79 @@
+<!--pages/detail/detail.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">预约详情</view>
+</cu-custom>
+<view class="bg-white padding  margin-top-xs">
+  <view class="cu-steps steps-arrow">
+    <view class="cu-item {{index>basics?'':'text-blue'}}" wx:for="{{basicsList}}" wx:key>
+      <text class="cuIcon-{{item.icon}}"></text> {{item.name}}
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-title text-black ">详情</text>
+  </view>
+  <!-- <view class="action">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="menuModal">设置</button>
+  </view> -->
+</view>
+<view class="cu-list menu text-left solid-top">
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">预约大门</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{record.doorName}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">来访人</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{record.guestName}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">来访单位</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{record.guestCompany}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">我司接待人</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{record.userName}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">来访开始时间</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{record.beginDate}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">来访结束时间</text>
+    </view>
+    <view class="action">
+      <text class="text-grey text-sm">{{record.endDate}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-black">备注信息</text>
+    </view>
+    <view class="action remark">
+      <text class="text-grey text-sm">{{record.remark}}</text>
+    </view>
+  </view>
+</view>

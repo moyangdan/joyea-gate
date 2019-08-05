@@ -1,0 +1,78 @@
+<!--index.wxml-->
+<view class="index w100">
+  <view class="header-block pr">
+    <image class="banner" src='https://ryanmo.oss-cn-shanghai.aliyuncs.com/index-bg.jpg' mode="aspectFill"></image>
+    <!-- 天气 -->
+    <weather size="sm" theme="light" />
+
+    <view class='contact_box'>
+      <view class='contact_left'>
+        <image src='../../images/horn.png' class='contact_img'></image>
+        <view class='contact_text'></view>{{text1}}
+      </view>
+      <view wx:if="{{false}}">
+        <button open-type='contact' class='contact_button'>马上对话</button>
+      </view>
+
+    </view>
+    <view class="cu-bar bg-white solid-bottom">
+      <view class="action">
+        <text class="cuIcon-title text-orange "></text> {{title}}
+      </view>
+    </view>
+    <view class='empty_box'>
+      <view wx:if="{{recordList == null || recordList.length<=0}}">
+        <view class="empty_icon">
+          <image src="../../images/empty.png"></image>
+        </view>
+        <view class='empty_text'>
+          <view>{{text2}}</view>
+        </view>
+        <button class='empty_btn flex_row_center' bindtap="start" wx:if="{{userType == 0}}">
+          点击开始预约
+        </button>
+      </view>
+    </view>
+  </view>
+  <view class="cu-list menu-avatar" wx:if="{{recordList != null && recordList.length>0}}">
+
+    <view class="cu-item" wx:for="{{recordList}}" wx:key="id" bindtap="goDetail" data-item="{{item}}">
+      <view class="cu-avatar round lg" style="background-image:url({{userInfo.avatarUrl}}"></view>
+      <view class="content">
+        <view class="text-grey">{{item.guestName}}</view>
+        <view class="text-gray text-sm flex">
+          <text class="text-cut">
+							<text class="margin-right-xs"></text> {{item.guestCompany}}
+          </text>
+        </view>
+      </view>
+      <view class="action">
+        <view class="text-grey text-xs">{{item.createdDate}}</view>
+        <image src='../../images/confirm.png' class='finish_img' wx:if="{{item.status == 3}}"></image>
+        <view class="cu-tag round bg-red light" wx:if="{{item.status == 2}}">待确认</view>
+        <image src='../../images/refuse.png' class='finish_img' wx:if="{{item.status == 4}}"></image>
+      </view>
+    </view>
+    <view>
+      <view class="loading" wx:if="{{searchLoading}}">加载中...</view>
+      <view class="loading complete" wx:if="{{searchLoadingComplete}}">--没有更多数据--</view>
+    </view>
+  </view>
+  <view wx:if="{{userType == 1}}">
+    <view class="back-top" bindtap="openDoor">
+      <image src='../../images/door.png' class='door_img'></image>
+    </view>
+  </view>
+  <view wx:if="{{recordList != null && recordList.length>0 && userType == 0}}">
+    <navigator url="../record/record?doorId={{doorId}}" hover-class="other-navigator-hover">
+      <view class="release-btn">
+        <icon class="iconfont icon-fabuxinxi"></icon>
+      </view>
+    </navigator>
+    <!-- 刷新并返回顶部 -->
+    <view class="back-top" bindtap="backTop">
+      <icon class="iconfont icon-icon_refresh"></icon>
+    </view>
+  </view>
+
+</view>
