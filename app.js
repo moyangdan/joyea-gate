@@ -1,7 +1,7 @@
 //app.js
 var rts = require("/utils/rts.js");
-//var api = "https://nextxx.joyea.cn:8899/openapi/";
-var api = "http://192.168.0.181:8999/";
+var api = "https://nextxx.joyea.cn:8899/openapi/";
+//var api = "http://192.168.0.181:8999/";
 App({
   globalData: {
     //小程序集成框架基础变量

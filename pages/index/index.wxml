@@ -54,7 +54,7 @@
       </view>
     </view>
     <view>
-      <view class="loading" wx:if="{{searchLoading}}">加载中...</view>
+      <!-- <view class="loading" wx:if="{{searchLoading}}">加载中...</view> -->
       <view class="loading complete" wx:if="{{searchLoadingComplete}}">--没有更多数据--</view>
     </view>
   </view>
